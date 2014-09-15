@@ -36,7 +36,6 @@ class PagesController extends AppController {
  * @var array
  */
 	public $uses = array();
-    public  $components = array('FileUpload.FileUpload');
 /**
  * Displays a view
  *
@@ -46,18 +45,11 @@ class PagesController extends AppController {
  *	or MissingViewException in debug mode.
  */
     function beforeFilter(){
-        $this->FileUpload->allowedTypes(array(
-                'jpg' => array('image/jpeg', 'image/pjpeg'),
-                'jpeg' => array('image/jpeg', 'image/pjpeg'),
-                'gif' => array('image/gif'),
-                'png' => array('image/png','image/x-png'),
-                'zip' => array('application/octet-stream')
-            )
-        );
-        $this->FileUpload->fields(array('name'=> 'name', 'type' => 'type', 'size' => 'size')); //các field tương ứng trong csdl
-        $this->FileUpload->uploadDir('files'); //file upload ảnh, lưu folder dã có sẵn
-        $this->FileUpload->fileModel('Fileupload');  //model của csdl
-        $this->FileUpload->fileVar('file'); //name input, mac dinh la file
+
+    }
+    public function index($value='')
+    {
+    	# code...
     }
 	public function display() {
 		$path = func_get_args();
@@ -88,16 +80,5 @@ class PagesController extends AppController {
 			throw new NotFoundException();
 		}
 	}
-    function upload()
-    {
-
-        if(!empty($this->data)){
-            if ($this->Fileupload->save($this->data)) {
-                $this->Session->setFlash(__('Upload successfully', true));
-                //$this->redirect(array('action' => 'index'));
-            } else {
-                $this->Session->setFlash(__('This file could not be uploaded. Please, try again.', true));
-            }
-        }
-    }
+  
 }

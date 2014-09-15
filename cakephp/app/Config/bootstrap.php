@@ -109,4 +109,4 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 
-CakePlugin::load('file_upload');
+CakePlugin::load('AjaxMultiUpload', array('bootstrap' => true));
