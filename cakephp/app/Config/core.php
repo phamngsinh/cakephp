@@ -50,7 +50,7 @@
  */
 	Configure::write('Error', array(
 		'handler' => 'ErrorHandler::handleError',
-		'level' => E_ALL & ~E_DEPRECATED & ~E_NOTICE & ~E_STRICT,
+		'level' => E_ALL & ~E_DEPRECATED,
 		'trace' => true
 	));
 
@@ -149,7 +149,7 @@
  *	`manager_index()` and `/manager/controller/index`
  *
  */
-	Configure::write('Routing.prefixes', array('admin'));
+	//Configure::write('Routing.prefixes', array('admin'));
 
 /**
  * Turn off all caching application-wide.
@@ -222,12 +222,12 @@
 /**
  * A random string used in security hashing methods.
  */
-	Configure::write('Security.salt', 'dddddddDYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi');
+	Configure::write('Security.salt', '3988191189DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
  */
-	Configure::write('Security.cipherSeed', '3434343476859309657453542496749683645');
+	Configure::write('Security.cipherSeed', '3988319118976859309657453542496749683645');
 
 /**
  * Apply timestamps with the last modified time to static assets (js, css, images).

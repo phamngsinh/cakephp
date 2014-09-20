@@ -1,0 +1,20 @@
+{
+	"name" : "RealEstate",
+	"description" : "Bat dong san tu do for Croogo",
+	"screenshot" : "screenshot.png",
+
+	"author" : "SMAGIC39",
+	"authorEmail" : "smagic39@gmail",
+	"authorUrl" : "https://twitter.com/smagic39",
+
+	"menus" : [
+		"main",
+		"footer"
+		],
+
+	"regions" : [
+		"left",
+		"right",
+		"region1"
+		]
+}
