@@ -87,7 +87,6 @@ Cache::config('default', array('engine' => 'File'));
  *
  * ));
  */
-CakePlugin::loadAll();
 
 Configure::write('Dispatcher.filters', array(
 	'AssetDispatcher',
@@ -108,5 +107,5 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
-
-CakePlugin::load('AjaxMultiUpload', array('bootstrap' => true));
+CakePlugin::load('HabtmCounterCache');
+CakePlugin::load( array( 'Blog' => array( 'routes' => True ) ) );

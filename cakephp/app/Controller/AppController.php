@@ -32,7 +32,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 	
-	public $components = array('Session', 'AjaxMultiUpload.Upload');
+	public $components = array('Session');
 	public function beforeFilter()
 	{
 	}
