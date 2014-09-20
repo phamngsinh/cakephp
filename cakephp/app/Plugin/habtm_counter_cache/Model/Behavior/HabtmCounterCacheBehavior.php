@@ -157,7 +157,7 @@ class HabtmCounterCacheBehavior extends ModelBehavior {
       $this->settings[$model->alias][$habtmAlias] = $habtmSpecificSettings;
 
     }
-
+    return true;
   }
 
   /**
