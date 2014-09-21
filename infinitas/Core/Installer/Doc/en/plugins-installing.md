@@ -1,1 +1,0 @@
-The process of installing plugins is similar to [updating plugins](/infinitas\_docs/Installer/plugins-updating).
