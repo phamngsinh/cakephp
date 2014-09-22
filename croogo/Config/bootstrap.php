@@ -76,6 +76,3 @@ CakeLog::config('error', array(
 ));
 
 CakePlugin::load('Croogo', array('bootstrap' => true));
-///private
-
-CakePlugin::loadAll();
